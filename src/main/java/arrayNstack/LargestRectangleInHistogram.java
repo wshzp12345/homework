@@ -37,4 +37,23 @@ public class LargestRectangleInHistogram {
         }
 
     }
+    class Solution2 {
+        private Stack<Integer> stack = new Stack<>();
+        public int largestRectangleArea(int[] heights) {
+            int ans = 0;
+
+            int[] tmp = new int[heights.length + 2];
+            System.arraycopy(heights, 0, tmp, 1, heights.length);
+            for(int i = 0; i < tmp.length; i++) {
+                int accumulateWidth = 1;
+                while(!stack.isEmpty() && tmp[stack.peek()] > tmp[i]) {
+                    int h =  tmp[stack.pop()];
+                    ans = Math.max(ans, (i - stack.peek()-1)* h);
+                }
+                stack.push(i);
+            }
+            return ans;
+        }
+    }
+
 }
