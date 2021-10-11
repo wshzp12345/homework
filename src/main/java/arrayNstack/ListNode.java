@@ -1,9 +1,10 @@
 package arrayNstack;
 
 public class ListNode {
-      int val;
+      double val;
       ListNode next;
+      ListNode pre;
       ListNode() {}
-      ListNode(int val) { this.val = val; }
-      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+      ListNode(double val) { this.val = val; }
+      ListNode(double val, ListNode next) { this.val = val; this.next = next; }
  }

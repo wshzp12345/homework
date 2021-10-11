@@ -1,5 +1,8 @@
 package arrayNstack;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 /**
@@ -21,6 +24,7 @@ import java.util.Scanner;
  * 分别表示当 i 取 2∼n 时，对应的 min1≤j<i|Ai−Aj| 和 Pi 的值。
  */
 public class 邻值查找 {
+
     public static void main(String[] args) {
         System.out.println("个数");
         Scanner sc= new Scanner(System.in);
@@ -29,12 +33,27 @@ public class 邻值查找 {
         System.out.println("数组");
         String sin2 = sc.nextLine();
         int [] A = new int[n];
+        Integer [] rank = new Integer[n];
         String s[]= sin2.split(" ");
         for(int i=0; i<s.length;i++) {
             A[i] = Integer.parseInt(s[i]);
+            rank[i] = i;
+        }
+        Arrays.sort(rank,(rki, rkj) ->{ return A[rki] - A[ rkj];});
+        // 建立链表
+        ListNode [] pos = new ListNode[n];
+        ListNode head = new ListNode(A[rank[0]]-1e9);
+        ListNode tail = new ListNode(A[rank[n-1]]+1e9);
+        head.pre = tail;
+        tail.next = head;
+        for(int i = 0; i < n; i++) {
+            pos[rank[0]] = AddNode();
         }
 
 
+    }
 
+    private static ListNode AddNode() {
+        return  null;
     }
 }
