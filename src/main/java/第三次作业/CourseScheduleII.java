@@ -42,6 +42,5 @@ public class CourseScheduleII {
             if(indexOfLessons != numCourses )return new int[]{};
             return lessons;
         }
-        PriorityQueue
     }
 }
