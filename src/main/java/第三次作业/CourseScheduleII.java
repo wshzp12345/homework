@@ -1,9 +1,6 @@
 package 第三次作业;
 
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class CourseScheduleII {
     class Solution {
@@ -45,5 +42,6 @@ public class CourseScheduleII {
             if(indexOfLessons != numCourses )return new int[]{};
             return lessons;
         }
+        PriorityQueue
     }
 }
