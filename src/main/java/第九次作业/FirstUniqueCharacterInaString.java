@@ -3,7 +3,7 @@ package 第九次作业;
 public class FirstUniqueCharacterInaString {
     class Solution {
         public int firstUniqChar(String s) {
-            s.le
+//            s.le
             char [] cc = s.toCharArray();
             boolean check [] = new boolean[cc.length];
             //   for(int i = 0; i < cc.length; i ++) check[i] = false;

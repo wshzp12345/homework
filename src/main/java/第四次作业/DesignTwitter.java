@@ -54,7 +54,7 @@ public class DesignTwitter {
             }
             return res;
         }
-        Arrays.sort()
+//        Arrays.sort()
 
         public void follow(int followerId, int followeeId) {
             if(followeeId == followerId) return;

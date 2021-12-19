@@ -6,7 +6,8 @@ public class Main {
 
 
     public static void main(String [] ss) {
-
+        Integer i = null;
+        System.out.println(i -10);
 
     }
 
